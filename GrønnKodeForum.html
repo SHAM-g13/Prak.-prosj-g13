@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="GrønnKode.css">
+        <title>GreenCode/Forum</title>
+    </head>
+
+    <body>
+    <header>
+        <div class="head">
+            <h1>Grønn Koding</h1>
+            <div class="mørk_lys">
+                <button><a href="GrønnKodeForumL.html">Lys</a></button>  
+            </div>
+        </div>
+
+        <nav class="bar">
+            <ul>
+                <li><a href="GrønnKode.html">Hjem</a></li>
+                <li><a href="GrønnKodeNyheter.html">Nyheter</a></li>
+                <li><a href="GrønnKodeLærMer.html">Lær mer</a></li>
+                <li><a href="GrønnKodeForum.html">Forum</a></li>
+                <li><a href="GrønnKodeOmOss.html">Om oss</a></li>
+                <li><input type="text" placeholder="Søk..."></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="forum">
+            <div class="forumspørsmål">
+                <h3>Regler og informasjon</h3>
+                <ol><li>Ikke gi ut personlig informasjon</li>
+                    <li>Unngå bruk av banneord</li>
+                    <li>Diskusjoner skal være saklige</li>
+                    <li>Unngå personkarateristiker, skelsord og generaliseringer</li>
+                </ol>
+            </div>
+
+            <!-- List of Posts -->
+            <div id="post-list">
+            <!-- Posts will be dynamically added here -->
+            </div>
+
+    <!-- Fixed Button to Add New Post -->
+    <div class="NyttSpørsmålKnapp"> 
+        <button><a href="GKNySpørring.html">+</a></button>
+    </div>
+
+    <script>
+        // Sample posts data (replace with dynamic data in a real application)
+        const posts = [
+            { id: 1, title: "First Post", content: "This is the content of the first post.", date: "2023-10-01" },
+            { id: 2, title: "Second Post", content: "This is the content of the second post.", date: "2023-10-02" },
+            { id: 3, title: "Third Post", content: "This is the content of the third post.", date: "2023-10-03" }
+        ];
+
+        // Sort posts by date (newest first)
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Display posts on the homepage
+        const postList = document.getElementById('post-list');
+        posts.forEach(post => {
+            const postDiv = document.createElement('div');
+            postDiv.innerHTML = `
+                <h2><a href="post-detail.html?id=${post.id}">${post.title}</a></h2>
+                <p>Date: ${post.date}</p>
+                <hr>
+            `;
+            postList.appendChild(postDiv);
+        });
+    </script>          
+               
+                </div> 
+              </a>
+            </ol>
+        </div>
+    </div>
+
+    <footer>
+        <span>&copy; &nbsp; Laget av Gruppe 13 | Ikke for faktisk bruk</span>
+
+    </footer>
+
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="GrønnKode.css">
+        <title>GreenCode/Forum/NySpørring</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="head">
+                <h1>Grønn Koding</h1>
+                <div class="mørk_lys">
+                    <button><a href="">Lys</a></button>  
+                </div>
+            </div>
+    
+            <nav class="bar">
+                <ul>
+                    <li><a href="GrønnKode.html">Hjem</a></li>
+                    <li><a href="GrønnKodeNyheter.html">Nyheter</a></li>
+                    <li><a href="GrønnKodeLærMer.html">Lær mer</a></li>
+                    <li><a href="GrønnKodeForum.html">Forum</a></li>
+                    <li><a href="GrønnKodeOmOss.html">Om oss</a></li>
+                    <li><input type="text" placeholder="Søk..."></li>
+                </ul>
+            </nav>
+        </header>
+    
+     <!-- Form to Add New Post -->
+     <form onsubmit="addPost(event)">
+        <label for="tittel">Tittel</label><br>
+        <input type="text" id="tittel" required><br><br>
+
+        <label for="brukernavn">Brukernavn</label><br>
+        <input type="text" id="brukernavn" required><br><br>
+
+        <label for="spørsmål">Hva lurer du på?</label><br>
+        <textarea id="spørsmål" rows="10" cols="50" required></textarea><br><br>
+
+        <button type="Legg ut">Legg ut</button>
+     </form>
+
+    <script>
+        function addPost(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form data
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            // Save post to localStorage (temporary storage)
+            const posts = JSON.parse(localStorage.getItem('posts')) || [];
+            const newPost = {
+                id: posts.length + 1,
+                title: title,
+                content: content,
+                date: new Date().toISOString().split('T')[0] // Current date
+            };
+            posts.push(newPost);
+            localStorage.setItem('posts', JSON.stringify(posts));
+
+            // Redirect to homepage
+            window.location.href = 'index.html';
+        }
+    </script>
+
+    </body>
+</html>

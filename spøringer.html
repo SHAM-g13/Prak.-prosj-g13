@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="GrønnKode.css">
+        <title>GreenCode/Forum</title>
+    </head>
+
+    <body>
+        <header>
+            <div class="head">
+                <h1>Grønn Koding</h1>
+                <div class="mørk_lys">
+                    <button><a href="">Lys</a></button>  
+                </div>
+            </div>
+    
+            <nav class="bar">
+                <ul>
+                    <li><a href="GrønnKode.html">Hjem</a></li>
+                    <li><a href="GrønnKodeNyheter.html">Nyheter</a></li>
+                    <li><a href="GrønnKodeLærMer.html">Lær mer</a></li>
+                    <li><a href="GrønnKodeForum.html">Forum</a></li>
+                    <li><a href="GrønnKodeOmOss.html">Om oss</a></li>
+                    <li><input type="text" placeholder="Søk..."></li>
+                </ul>
+            </nav>
+        </header>
+
+    <h1 id="post-title"></h1>
+    <p id="post-content"></p>
+    <p><strong>Date:</strong> <span id="post-date"></span></p>
+
+    <hr>
+
+    <h2>Replies</h2>
+    <div id="replies">
+        <!-- Replies will be dynamically added here -->
+    </div>
+
+    <hr>
+
+    <h2>Add a Reply</h2>
+    <form onsubmit="addReply(event)">
+        <textarea id="reply-content" rows="5" cols="50" required></textarea><br><br>
+        <button type="submit">Submit Reply</button>
+    </form>
+
+    <script>
+        // Get post ID from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const postId = parseInt(urlParams.get('id'));
+
+        // Load post data
+        const posts = JSON.parse(localStorage.getItem('posts')) || [];
+        const post = posts.find(p => p.id === postId);
+
+        if (post) {
+            document.getElementById('post-title').textContent = post.title;
+            document.getElementById('post-content').textContent = post.content;
+            document.getElementById('post-date').textContent = post.date;
+        } else {
+            document.body.innerHTML = "<h1>Post not found</h1>";
+        }
+
+        // Load replies
+        const replies = JSON.parse(localStorage.getItem(`replies-${postId}`)) || [];
+        const repliesDiv = document.getElementById('replies');
+        replies.forEach(reply => {
+            const replyDiv = document.createElement('div');
+            replyDiv.innerHTML = `<p>${reply.content}</p><hr>`;
+            repliesDiv.appendChild(replyDiv);
+        });
+
+        // Function to add a reply
+        function addReply(event) {
+            event.preventDefault();
+
+            const replyContent = document.getElementById('reply-content').value;
+
+            // Save reply to localStorage
+            const replies = JSON.parse(localStorage.getItem(`replies-${postId}`)) || [];
+            replies.push({ content: replyContent });
+            localStorage.setItem(`replies-${postId}`, JSON.stringify(replies));
+
+            // Reload the page to display the new reply
+            window.location.reload();
+        }
+    </script>
+
+    <footer>
+        <span>&copy; &nbsp; Laget av Gruppe 13 | Ikke for faktisk bruk</span>
+        
+    </footer>
+
+    </body>
+</html>
