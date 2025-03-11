@@ -1,0 +1,90 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: lightgray;
+}
+
+h1{
+    margin-left: 20px;
+}
+
+.bar {
+    background-color: darkslategray;
+}
+
+.bar ul {
+    display: flex;
+}
+
+.bar ul li {
+    margin: 20px;
+    list-style: none;
+    display: flex;
+}
+
+a{
+    color: beige;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.linje{
+    background-color: darkslategray;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 1px;
+    margin: 5%;
+}
+
+.bunn{
+    display: flex;
+}
+
+textarea{
+    width: 500px;
+    height: 100px;
+}
+
+button{
+    display: block;
+    background-color: darkslategray;
+    color: beige;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+footer{
+    color: gray;
+}
+
+.nyhet{
+    background-color: darkslategray;
+    color: beige;
+    border-radius: 5px;
+    margin: 10%;
+    padding-left: 10px;
+}
+
+.nyhet p{
+    font-size: small;
+    padding-bottom: 5px;
+}
+
+.head{
+    display: flex;
+}
+
+.mørk_lys{
+    float: right;
+    height: 30px;
+}

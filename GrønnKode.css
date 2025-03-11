@@ -1,0 +1,114 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    color: beige;
+}
+
+h1{
+    margin-left: 20px;
+    padding-bottom: 0;
+}
+
+.bar {
+    background-color: #4b6f6f;
+    padding: 0%;
+}
+
+.bar ul {
+    display: flex;
+}
+
+.bar ul li {
+    margin: 20px;
+    list-style: none;
+    display: flex;
+}
+
+a{
+    color: beige;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.container{
+    margin: 20px;
+    padding: 20px;
+}
+
+.linje{
+    background-color: darkslategray;
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 1px;
+    margin: 5%;
+}
+
+.bunn{
+    display: flex;
+}
+
+textarea{
+    width: 500px;
+    height: 100px;
+}
+
+button{
+    display: block;
+    background-color: darkslategray;
+    color: beige;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.NyttSpørsmålKnapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+}
+
+.mørk_lys{
+    float: right;
+    height: 30px;
+}
+
+
+.nyhet{
+    background-color: darkslategray;
+    color: beige;
+    border-radius: 5px;
+    margin: 10%;
+    padding-left: 10px;
+}
+
+.nyhet p{
+    font-size: small;
+    padding-bottom: 5px;
+}
+
+input{
+    width: 60%;
+    border-radius: 10%;
+    margin: auto;
+}
+
+textarea{
+    width: 60%;
+    border-radius: 3%;
+}
+
+.head{
+    display: flex;
+    background-color: darkslategray;
+}
+
+footer{
+    color: gray;
+}
+
