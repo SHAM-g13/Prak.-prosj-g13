@@ -1,6 +1,7 @@
 
 *{
     box-sizing: border-box;
+    max-width: 1500Px;
 }
 
 body {
@@ -109,6 +110,27 @@ textarea{
 }
 
 footer{
-    color: gray;
+    color: darkslategray;
 }
 
+.velkommen{
+    position: relative;
+    left: 20%;
+    top: 10%;
+}
+.nyheter{
+    position: relative;
+    left:  50%;
+}
+.lær{
+    position: relative;
+    left: 20%;
+}
+.forum{
+    position: relative;
+    left: 50%;
+}
+.om{
+    position: relative;
+    left: 20%;
+}
