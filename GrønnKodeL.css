@@ -2,69 +2,149 @@
 *{
     box-sizing: border-box;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: lightgray;
+    background-color: beige;
+    color: black;
+}
+a{
+    color: black;
+    font-weight: bolder;
+    text-decoration: none;
+}
+button{
+    display: block;
+    background-color: darkslategray;
+    color: beige;
+    padding: 2%;
+    border-radius: 25px;
+    font-size: large;
+}
+form{
+    position: absolute;
+    left: 25%;
+    top: 25%;
+    width: 600px;
 }
 
 h1{
     margin-left: 20px;
+    padding-bottom: 0;
+}
+.head{
+    display: flex;
+    background-color: darkslategray;
+    color: beige;
+}
+.mørk_lys{
+    display: block;
+    background-color: darkslategray;
+    padding: 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    float: right;
+    height: 5%;
+    width: 10%;
+    position: absolute;
+    right: 5%;
+    top: 3.5%;
+}
+.mørk_lys a {
+    color: beige;
 }
 
 .bar {
-    background-color: darkslategray;
+    padding: 0%;
 }
-
 .bar ul {
     display: flex;
+    background-color: #4b6f6f;
+    color: beige;
+    margin: 0;
 }
-
 .bar ul li {
     margin: 20px;
     list-style: none;
     display: flex;
 }
-
-a{
+.bar ul li a {
     color: beige;
-    font-weight: bolder;
-    text-decoration: none;
+}
+.søk{
+    position: absolute;
+    left: 83%;
+    width: 5%;
 }
 
-.container{
-    margin: 20px;
-    padding: 20px;
+.velkommen{
+    position: absolute;
+    left: 25%;
+    top: 11.4%;
+    padding: 5%;
 }
-
-.linje{
-    background-color: darkslategray;
-    border-radius: 10px;
-    padding: 10px;
-    padding-top: 1px;
-    margin: 5%;
+.Bilde_velkommen{
+    float: right;
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 100%;
+    top: 20.5%;
 }
-
-.bunn{
-    display: flex;
+.nyheter{
+    position: absolute;
+    right: 40%;
+    top: 38.8%;
+    padding: 5%;
 }
-
-textarea{
-    width: 500px;
-    height: 100px;
+.Bilde_nyheter{
+    float: left;
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    right: 100%;
+    top: 40%;
 }
-
-button{
-    display: block;
-    background-color: darkslategray;
-    color: beige;
-    padding: 10px;
-    border-radius: 20px;
-    font-weight: bold;
+.artikkel{
+    position: absolute;
+    left: 25%;
+    top: 81.3%;
+    padding: 5%;
 }
-
-footer{
-    color: gray;
+.Bilde_artikkel{
+    float: right;
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 116%;
+    top: 20.5%;
+}
+.forum{
+    position: absolute;
+    right: 41%;
+    top: 107%;
+    padding: 5%;
+}
+.Bilde_forum{
+    float: left;
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    right: 100%;
+    top: 40%;
+}
+.om{
+    position: absolute;
+    left: 25%;
+    top: 149.5%;
+    padding: 5%;
+}
+.Bilde_om{
+    float: right;
+    width: 400px;
+    height: 250px;
+    position: absolute;
+    left: 116.8%;
+    top: 20.5%;
 }
 
 .nyhet{
@@ -74,17 +154,50 @@ footer{
     margin: 10%;
     padding-left: 10px;
 }
-
 .nyhet p{
     font-size: small;
     padding-bottom: 5px;
 }
 
-.head{
-    display: flex;
+.container{
+    position: absolute;
+    top: 35%;
+    width: 1400px;
+    margin: 20px;
+    padding: 20px;
+
+}
+.nyttSpørsmål {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    display: block;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: x-large;
+}
+.forumsregler{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    font-size: larger;
+}
+textarea{
+    width: 700px;
+    height: 300px;
+    border-radius: 3%;
+}
+input{
+    width: 700px;
+    border-radius: 10%;
+    margin: auto;
 }
 
-.mørk_lys{
-    float: right;
-    height: 30px;
+
+footer{
+    position: absolute;
+    bottom: 0%;
 }
