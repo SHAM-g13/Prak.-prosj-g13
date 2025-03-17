@@ -10,9 +10,7 @@
     <header>
         <div class="head">
             <h1>Grønn Koding</h1>
-            <div class="mørk_lys">
-                <button><a href="GrønnKodeForumL.html">Lys</a></button>  
-            </div>
+                <button class="mørk_lys"><a href="GrønnKodeForumL.html">Lys</a></button>   
         </div>
 
         <nav class="bar">
@@ -22,21 +20,23 @@
                 <li><a href="GrønnKodeLærMer.html">Lær mer</a></li>
                 <li><a href="GrønnKodeForum.html">Forum</a></li>
                 <li><a href="GrønnKodeOmOss.html">Om oss</a></li>
-                <li><input type="text" placeholder="Søk..."></li>
+                <li class="søk"><input type="text" placeholder="Søk..."></li>
             </ul>
         </nav>
     </header>
+    
+    <div class="forumsregler">
+         <h3>Regler og informasjon</h3>
+            <ol><li>Ikke gi ut personlig informasjon</li>
+                <li>Unngå bruk av banneord</li>
+                <li>Diskusjoner skal være saklige</li>
+                <li>Unngå personkarateristiker, skelsord og generaliseringer</li>
+            </ol>
+    </div>
 
     <div class="container">
-        <div class="forum">
-            <div class="forumspørsmål">
-                <h3>Regler og informasjon</h3>
-                <ol><li>Ikke gi ut personlig informasjon</li>
-                    <li>Unngå bruk av banneord</li>
-                    <li>Diskusjoner skal være saklige</li>
-                    <li>Unngå personkarateristiker, skelsord og generaliseringer</li>
-                </ol>
-            </div>
+        <div class="forumet">
+            
 
             <!-- List of Posts -->
             <div id="post-list">
@@ -44,9 +44,7 @@
             </div>
 
     <!-- Fixed Button to Add New Post -->
-    <div class="NyttSpørsmålKnapp"> 
-        <button><a href="GKNySpørring.html">+</a></button>
-    </div>
+        <button class="nyttSpørsmål"><a href="GKNySpørring.html">+</a></button>
 
     <script>
         // Sample posts data (replace with dynamic data in a real application)

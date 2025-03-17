@@ -3,41 +3,40 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="GrønnKodeL.css">
-        <title>GreenCode/ForumL</title>
+        <title>GreenCode/Forum</title>
     </head>
 
     <body>
     <header>
         <div class="head">
             <h1>Grønn Koding</h1>
-            <div class="mørk_lys">
-                <button><a href="GrønnKodeForum.html">Mørk/Lys</a></button>  
-            </div>
+                <button class="mørk_lys"><a href="GrønnKodeForumL.html">Mørk</a></button>   
         </div>
 
         <nav class="bar">
             <ul>
-                <li><a href="GrønnKode.html">Hjem</a></li>
-                <li><a href="GrønnKodeNyheter.html">Nyheter</a></li>
-                <li><a href="GrønnKodeLærMer.html">Lær mer</a></li>
-                <li><a href="GrønnKodeVidoer.html">Videoer</a></li>
-                <li><a href="GrønnKodeForum.html">Forum</a></li>
-                <li><a href="GrønnKodeOmOss.html">Om oss</a></li>
-                <li><input type="text" placeholder="Søk..."></li>
+                <li><a href="GrønnKodeL.html">Hjem</a></li>
+                <li><a href="GrønnKodeNyheterL.html">Nyheter</a></li>
+                <li><a href="GrønnKodeLærMerL.html">Lær mer</a></li>
+                <li><a href="GrønnKodeForumL.html">Forum</a></li>
+                <li><a href="GrønnKodeOmOssL.html">Om oss</a></li>
+                <li class="søk"><input type="text" placeholder="Søk..."></li>
             </ul>
         </nav>
     </header>
+    
+    <div class="forumsregler">
+         <h3>Regler og informasjon</h3>
+            <ol><li>Ikke gi ut personlig informasjon</li>
+                <li>Unngå bruk av banneord</li>
+                <li>Diskusjoner skal være saklige</li>
+                <li>Unngå personkarateristiker, skelsord og generaliseringer</li>
+            </ol>
+    </div>
 
     <div class="container">
-        <div class="forum">
-            <div class="forumspørsmål">
-                <h3>Regler og informasjon</h3>
-                <ol><li>Ikke gi ut personlig informasjon</li>
-                    <li>Unngå bruk av banneord</li>
-                    <li>Diskusjoner skal være saklige</li>
-                    <li>Unngå personkarateristiker, skelsord og generaliseringer</li>
-                </ol>
-            </div>
+        <div class="forumet">
+            
 
             <!-- List of Posts -->
             <div id="post-list">
@@ -45,7 +44,7 @@
             </div>
 
     <!-- Fixed Button to Add New Post -->
-    <button style="position: fixed; bottom: 20px; right: 20px;" onclick="location.href='new-post.html'">+</button>
+        <button class="nyttSpørsmål"><a href="GKNySpørring.html">+</a></button>
 
     <script>
         // Sample posts data (replace with dynamic data in a real application)
