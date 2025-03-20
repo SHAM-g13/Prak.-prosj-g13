@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grønn Koding</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        .article {
+            background-color: white;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .article-title {
+            font-size: 1.2em;
+            color: #4CAF50;
+            cursor: pointer;
+        }
+        .article-description {
+            color: #666;
+            display: none; /* Skjuler beskrivelsen som standard */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grønn Koding</h1>
+    </header>
+    <div class="container">
+        <h2>Velkommen til vår artikkelside om grønn koding</h2>
+        <p>Her finner du informative artikler om hvordan du kan kode på en miljøvennlig måte.</p>
+
+        <div class="article">
+            <h3 class="article-title" onclick="toggleDescription(this)">Artikkel 1: Introduksjon til Grønn Koding</h3>
+            <p class="article-description">Lær det grunnleggende om grønn koding og hvorfor det er viktig for miljøet.</p>
+        </div>
+
+        <div class="article">
+            <h3 class="article-title" onclick="toggleDescription(this)">Artikkel 2: Beste Praksis for Miljøvennlig Koding</h3>
+            <p class="article-description">Oppdag beste praksis for å skrive kode som er energibesparende og ressursoptimalisert.</p>
+        </div>
+
+        <div class="article">
+            <h3 class="article-title" onclick="toggleDescription(this)">Artikkel 3: Casestudier om Grønn Koding</h3>
+            <p class="article-description">Les om casestudier hvor grønn koding har gjort en stor forskjell.</p>
+        </div>
+        
+        <!-- Legg til flere artikler her -->
+    </div>
+
+    <script>
+        function toggleDescription(element) {
+            var description = element.nextElementSibling;
+            if (description.style.display === "none" || description.style.display === "") {
+                description.style.display = "block";
+            } else {
+                description.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
