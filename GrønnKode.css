@@ -19,6 +19,9 @@ button{
     padding: 2%;
     border-radius: 25px;
     font-size: large;
+    border-width: 2px;
+    border-color: beige;
+    border-style: solid;
 }
 form{
     position: absolute;
@@ -38,13 +41,11 @@ h1{
     display: flex;
     background-color: darkslategray;
     margin: 0;
+    width: 100.5%;
 }
 .mørk_lys{
     display: block;
     background-color: #4b6f6f;
-    border-width: 2px;
-    border-color: beige;
-    border-style: solid;
     border-radius: 30px;
     padding: 10px;
     font-weight: bold;
@@ -56,13 +57,11 @@ h1{
     top: 27px;
 }
 
-.bar {
-    padding: 0%;
-}
 .bar ul {
     display: flex;
     background-color: #4b6f6f;
     margin: 0;
+    width: 100.5%;
 }
 .bar ul li {
     margin: 20px;
@@ -77,7 +76,7 @@ h1{
 
 .velkommen{
     position: absolute;
-    left: 400px;
+    left: 360px;
     top: 100.5px;
     padding: 5%;
 }
@@ -85,7 +84,7 @@ h1{
     float: right;
     width: 400px;
     position: absolute;
-    left: 250px;
+    left: 290px;
     top: 45px;
 }
 .nyheter{
@@ -103,7 +102,7 @@ h1{
 }
 .artikkel_forside {
     position: absolute;
-    left: 400px;
+    left: 350px;
     top: 735px;
     padding: 5%;
 }
@@ -111,7 +110,7 @@ h1{
     float: right;
     width: 400px;
     position: absolute;
-    left: 250px;
+    left: 300px;
     top: 45px;
 }
 .forum{
@@ -129,7 +128,7 @@ h1{
 }
 .om{
     position: absolute;
-    left: 400px;
+    left: 360px;
     top: 1368.5px;
     padding: 5%;
 }
@@ -137,22 +136,36 @@ h1{
     float: right;
     width: 400px;
     position: absolute;
-    left: 250px;
+    left: 290px;
     top: 45px;
 }
 
 .nyhet{
-    background-color: darkslategray;
+    background-color: #4b6f6f;
     color: beige;
-    border-radius: 5px;
-    margin: 10%;
-    padding-left: 13px;
+    width: 70%;
+    border-radius: 15px;
+    position: relative;
+    left: 15%;
+    padding: 1px;
+    padding-left: 15px;
+    margin: 15px;
+}
+.nyhet_pos{
+    position: absolute;
+    top: 220px;
 }
 .nyhet p{
     font-size: small;
     padding-bottom: 5px;
 }
 
+.artikkel_container{
+    position: absolute;
+    top: 160px;
+    width: 80%;
+    left: 10%;
+}
 .artikkel {
     background-color: #4b6f6f;
     margin: 10px 0;
@@ -166,6 +179,7 @@ h1{
 }
 .artikkel_innhold {
     display: none;
+    font-size: large;
 }
 
 .container{
@@ -204,7 +218,18 @@ input{
     border-radius: 10%;
     margin: auto;
 }
+form{
+    background-color: #4b6f6f;
+    padding: 20px;
+    width: 750px;
+    border-radius: 15px;
+}
 
+.om_innhold{
+    position: absolute;
+    top: 170px;
+    left: 65px;
+}
 
 footer{
     background-color: #4b6f6f;
@@ -221,4 +246,3 @@ footer ul{
     list-style: none;
     padding: 30px;
 }
-
