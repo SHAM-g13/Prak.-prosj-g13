@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="GrønnKodeL.css">
+        <title>GreenCode/Forum</title>
+    </head>
+
+    <body>
+    <header>
+        <div class="head">
+            <h1>Grønn Koding</h1>
+                <button class="mørk_lys"><a href="GrønnKodeForum.html">Mørk</a></button>   
+        </div>
+
+        <nav class="bar">
+            <ul>
+                <li><a href="LGrønnKode.html">Hjem</a></li>
+                <li><a href="LGrønnKodeNyheter.html">Nyheter</a></li>
+                <li><a href="LGrønnKodeArtikkel.html">Lær mer</a></li>
+                <li><a href="LGrønnKodeForum.html">Forum</a></li>
+                <li><a href="LGrønnKodeOmOss.html">Om oss</a></li>
+                <li class="søk"><input type="text" placeholder="Søk..."></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="forumsregler">
+         <h3>Regler og informasjon</h3>
+            <ol><li>Ikke gi ut personlig informasjon</li>
+                <li>Unngå bruk av banneord</li>
+                <li>Diskusjoner skal være saklige</li>
+                <li>Unngå personkarateristiker, skelsord og generaliseringer</li>
+            </ol>
+    </div>
+
+    <div class="container">
+        <div class="forumet">
+            
+
+            <!-- List of Posts -->
+            <div id="post-list">
+            <!-- Posts will be dynamically added here -->
+            </div>
+
+    <!-- Fixed Button to Add New Post -->
+        <button class="nyttSpørsmål"><a href="LGKNySpørring.html">+</a></button>
+
+    <script>
+        // Sample posts data (replace with dynamic data in a real application)
+        const posts = [
+            { id: 1, title: "First Post", content: "This is the content of the first post.", date: "2023-10-01" },
+            { id: 2, title: "Second Post", content: "This is the content of the second post.", date: "2023-10-02" },
+            { id: 3, title: "Third Post", content: "This is the content of the third post.", date: "2023-10-03" }
+        ];
+
+        // Sort posts by date (newest first)
+        posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+        // Display posts on the homepage
+        const postList = document.getElementById('post-list');
+        posts.forEach(post => {
+            const postDiv = document.createElement('div');
+            postDiv.innerHTML = `
+                <h2><a href="post-detail.html?id=${post.id}">${post.title}</a></h2>
+                <p>Date: ${post.date}</p>
+                <hr>
+            `;
+            postList.appendChild(postDiv);
+        });
+    </script>          
+               
+                </div> 
+              </a>
+            </ol>
+        </div>
+    </div>
+
+    <footer>
+        <div class="info">
+        <ul>
+            <li><a href="LGrønnKode.html">Hjem</a></li>
+            <li><a href="LGrønnKodeNyheter.html">Nyheter</a></li>
+            <li><a href="LGrønnKodeArtikkel.html">Lær mer</a></li>
+            <li><a href="LGrønnKodeForum.html">Forum</a></li>
+            <li><a href="LGrønnKodeOmOss.html">Om oss</a></li>
+        </ul>
+        <p>Kontaktinformasjon <br>
+           E-post: 276688@usn.no <br>
+           Tlf: 8008135<br>
+           Adresse: 
+        </p>
+        </div>
+        <span>&copy; &nbsp; Laget av Gruppe 13 | Ikke for faktisk bruk</span>
+    </footer>
+    </body>
+</html>

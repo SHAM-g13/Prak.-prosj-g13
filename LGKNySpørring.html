@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="GrønnKodeL.css">
+        <title>GreenCode/Forum/NySpørring</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="head">
+                <h1>Grønn Koding</h1>
+                    <button class="mørk_lys"><a href="GKNySpørring.html">Mørk</a></button>   
+            </div>
+    
+            <nav class="bar">
+                <ul>
+                    <li><a href="LGrønnKode.html">Hjem</a></li>
+                    <li><a href="LGrønnKodeNyheter.html">Nyheter</a></li>
+                    <li><a href="LGrønnKodeArtikkel.html">Lær mer</a></li>
+                    <li><a href="LGrønnKodeForum.html">Forum</a></li>
+                    <li><a href="LGrønnKodeOmOss.html">Om oss</a></li>
+                    <li class="søk"><input type="text" placeholder="Søk..."></li>
+                </ul>
+            </nav>
+        </header>
+    
+     <!-- Form to Add New Post -->
+     <form onsubmit="addPost(event)">
+        <label for="tittel">Tittel</label><br>
+        <input type="text" id="tittel" required><br><br>
+
+        <label for="brukernavn">Brukernavn</label><br>
+        <input type="text" id="brukernavn" required><br><br>
+
+        <label for="spørsmål">Hva lurer du på?</label><br>
+        <textarea id="spørsmål" rows="10" cols="50" required></textarea><br><br>
+
+        <button type="Legg ut">Legg ut</button>
+     </form>
+
+    <script>
+        function addPost(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form data
+            const title = document.getElementById('title').value;
+            const content = document.getElementById('content').value;
+
+            // Save post to localStorage (temporary storage)
+            const posts = JSON.parse(localStorage.getItem('posts')) || [];
+            const newPost = {
+                id: posts.length + 1,
+                title: title,
+                content: content,
+                date: new Date().toISOString().split('T')[0] // Current date
+            };
+            posts.push(newPost);
+            localStorage.setItem('posts', JSON.stringify(posts));
+
+            // Redirect to homepage
+            window.location.href = 'index.html';
+        }
+    </script>
+
+<footer>
+    <div class="info">
+    <ul>
+        <li><a href="LGrønnKode.html">Hjem</a></li>
+        <li><a href="LGrønnKodeNyheter.html">Nyheter</a></li>
+        <li><a href="LGrønnKodeArtikkel.html">Lær mer</a></li>
+        <li><a href="LGrønnKodeForum.html">Forum</a></li>
+        <li><a href="LGrønnKodeOmOss.html">Om oss</a></li>
+    </ul>
+    <p>Kontaktinformasjon <br>
+       E-post: 276688@usn.no <br>
+       Tlf: 8008135<br>
+       Adresse: 
+    </p>
+    </div>
+    <span>&copy; &nbsp; Laget av Gruppe 13 | Ikke for faktisk bruk</span>
+</footer>
+
+    </body>
+</html>
